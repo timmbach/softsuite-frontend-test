@@ -1,0 +1,127 @@
+@import "../../styles/colours";
+
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  // border: 1px solid red;
+  // margin: 0;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  z-index: 10;
+
+  .header__logo {
+    width: 20%;
+    padding: 10px;
+
+    // img {
+    //   width: 170px;
+    // }
+  }
+  .header__nav {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0px 20px;
+
+    .header__navOrgChange {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $primary;
+      width: 220px;
+      height: 45px;
+      padding: 8px 10px;
+      border-radius: 3px;
+      background-color: $secondary;
+      .header__navOrgChange_name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-size: 0.75rem;
+        gap: 3px;
+        margin-left: -20px;
+        // height: 50px;
+      }
+    }
+    .header__navSearch {
+      display: flex;
+
+      padding: 0;
+      .header__navSearchInput {
+        padding: 10px 20px;
+        outline: none;
+        border: 1px solid $borderGray;
+        border-radius: 5px 0px 0px 5px;
+        width: 280px;
+        font-size: 16px;
+        height: 45px;
+      }
+      .header__navSearchInput::placeholder {
+        color: $lightPrimary;
+        opacity: 0.8;
+        font-size: 0.8rem;
+      }
+    }
+    .header__navSearchIcon {
+      background: $green;
+      color: white;
+      width: 40px;
+      border-radius: 0px 5px 5px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .header__actions {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 40px;
+
+    .header__actions_notification {
+      position: relative;
+      .header__actions_notificationBell {
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        background: red;
+        position: absolute;
+        top: 0.5px;
+        right: 0.5px;
+      }
+    }
+    .header__actions_profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .header__actions_profilePic {
+        img {
+          width: 40px;
+          border-radius: 50px;
+        }
+      }
+      .header__actions_profileName {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 12px;
+        gap: 5px;
+
+        span:first-child {
+          font-weight: bold;
+          color: $primary;
+        }
+        span:nth-child(2) {
+          color: $lightPrimary;
+        }
+      }
+    }
+  }
+}

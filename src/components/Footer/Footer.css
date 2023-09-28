@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  min-height: 50px;
+  width: 100%;
+  color: white;
+  background-color: #2d416f;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0;
+}
+.footer div:nth-child(1) {
+  padding-left: 30px;
+}
+.footer div:nth-child(2) {
+  padding-right: 30px;
+}
+.footer .footer_contact a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,112 @@
+.header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  z-index: 10;
+}
+.header .header__logo {
+  width: 20%;
+  padding: 10px;
+}
+.header .header__nav {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 0px 20px;
+}
+.header .header__nav .header__navOrgChange {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2d416f;
+  width: 220px;
+  height: 45px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #f6f7f9;
+}
+.header .header__nav .header__navOrgChange .header__navOrgChange_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+  gap: 3px;
+  margin-left: -20px;
+}
+.header .header__nav .header__navSearch {
+  display: flex;
+  padding: 0;
+}
+.header .header__nav .header__navSearch .header__navSearchInput {
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px 0px 0px 5px;
+  width: 280px;
+  font-size: 16px;
+  height: 45px;
+}
+.header .header__nav .header__navSearch .header__navSearchInput::-moz-placeholder {
+  color: #57678c;
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+.header .header__nav .header__navSearch .header__navSearchInput::placeholder {
+  color: #57678c;
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+.header .header__nav .header__navSearchIcon {
+  background: #4baa79;
+  color: white;
+  width: 40px;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header__actions {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.header .header__actions .header__actions_notification {
+  position: relative;
+}
+.header .header__actions .header__actions_notification .header__actions_notificationBell {
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background: red;
+  position: absolute;
+  top: 0.5px;
+  right: 0.5px;
+}
+.header .header__actions .header__actions_profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .header__actions .header__actions_profile .header__actions_profilePic img {
+  width: 40px;
+  border-radius: 50px;
+}
+.header .header__actions .header__actions_profile .header__actions_profileName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  gap: 5px;
+}
+.header .header__actions .header__actions_profile .header__actions_profileName span:first-child {
+  font-weight: bold;
+  color: #2d416f;
+}
+.header .header__actions .header__actions_profile .header__actions_profileName span:nth-child(2) {
+  color: #57678c;
+}/*# sourceMappingURL=Header.css.map */

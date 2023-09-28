@@ -1,0 +1,27 @@
+@import "../../styles/colours";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  min-height: 50px;
+  width: 100%;
+  color: white;
+  background-color: $primary;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0;
+  //   padding: 0px 20px;
+  div:nth-child(1) {
+    padding-left: 30px;
+  }
+  div:nth-child(2) {
+    padding-right: 30px;
+  }
+  .footer_contact a {
+    text-decoration: none;
+    color: white;
+  }
+}

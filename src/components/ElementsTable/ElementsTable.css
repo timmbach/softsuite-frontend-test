@@ -1,0 +1,42 @@
+.emptyElementsTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 80px;
+}
+.emptyElementsTable .emptyElementsTable__info {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  color: #2d416f;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.elementsTable {
+  width: 100%;
+  margin: 10px 0px;
+  border-collapse: collapse;
+}
+.elementsTable tr > th,
+.elementsTable tr > td {
+  padding: 15px;
+  border: none;
+}
+.elementsTable tr > td {
+  border-bottom: 2px solid #f6f7f9;
+}
+.elementsTable .elementsTable__head {
+  text-align: left;
+  background-color: #2d416f;
+  color: white;
+}
+.elementsTable .elementsTable__body {
+  text-align: left;
+}/*# sourceMappingURL=ElementsTable.css.map */

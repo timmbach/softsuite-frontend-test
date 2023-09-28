@@ -1,0 +1,110 @@
+.elementsRoute {
+  color: black;
+  background-color: #f6f7f9;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 40px;
+}
+.elementsRoute .elementsRoute__route {
+  display: flex;
+  gap: 10px;
+  background: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.elementsRoute .elementsRoute__route .elementsRoute__route_arrow {
+  color: #57678c;
+}
+.elementsRoute .elementsRoute__route span:nth-child(1) {
+  color: #57678c;
+  opacity: 0.5;
+}
+.elementsRoute .elementsRoute__route span:nth-child(3) {
+  color: #57678c;
+  opacity: 0.5;
+}
+.elementsRoute .elementsRoute__route span:nth-child(5) {
+  color: #2d416f;
+}
+.elementsRoute .elementsRoute__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_heading {
+  color: #2d416f;
+  font-size: 0.95rem;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+  background-color: #f6f7f9;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__search {
+  display: flex;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__search .elementsRoute__searchInput {
+  padding: 18px 10px;
+  outline: none;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px 0px 0px 5px;
+  width: 250px;
+  font-size: 12px;
+  height: 25px;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__search .elementsRoute__searchInput::-moz-placeholder {
+  color: #57678c;
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__search .elementsRoute__searchInput::placeholder {
+  color: #57678c;
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__search .elementsRoute__searchIcon {
+  background: #4baa79;
+  color: white;
+  width: 38px;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_nav .elementsRoute__controls_slider {
+  padding: 5px;
+  background-color: #2d416f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 38px;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_addNew {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  background-color: #4baa79;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+.elementsRoute .elementsRoute__container .elementsRoute__container_table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=ElementsRoute.css.map */
