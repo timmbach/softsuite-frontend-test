@@ -1,0 +1,52 @@
+.additionalDetailsForm {
+  background-color: white;
+  margin: 10px;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.additionalDetailsForm .additionalDetailsForm__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.additionalDetailsForm .additionalDetailsForm__heading img {
+  width: 50px;
+}
+.additionalDetailsForm .additionalDetailsForm__heading .additionalDetailsForm__title {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.additionalDetailsForm .additionalDetailsForm__heading .additionalDetailsForm__title p {
+  color: grey;
+}
+.additionalDetailsForm .additionalDetailsForm__body {
+  width: 100%;
+  padding: 2px;
+}
+.additionalDetailsForm .additionalDetailsForm__body ul {
+  list-style: none;
+  padding: 20px;
+}
+.additionalDetailsForm .additionalDetailsForm__body ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.additionalDetailsForm .additionalDetailsForm__body ul li p {
+  color: grey;
+  font-size: 0.9rem;
+}
+.additionalDetailsForm .additionalDetailsForm__body ul li span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}/*# sourceMappingURL=AdditionalDetailsForm.css.map */

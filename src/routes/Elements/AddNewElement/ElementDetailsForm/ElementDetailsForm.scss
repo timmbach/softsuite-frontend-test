@@ -1,18 +1,15 @@
-@import "../../../../../Styles/Constants";
-@import "../../../../../Styles/Colors";
-@import "../../../../../Styles/fonts";
-
-.frequencyForm {
+@import "../../../../styles/colours";
+.elementDetailsForm {
   width: 95%;
-  background-color: $veryLightGrey;
+  background-color: white;
   border-radius: 10px;
   margin: auto;
   margin-top: 5%;
   padding: 3%;
-  .form_group + .form_group {
+  .elementDetailsForm__formGroup + .elementDetailsForm__formGroup {
     margin-top: 10px;
   }
-  .form_group {
+  .elementDetailsForm__formGroup {
     display: flex;
     flex-direction: column;
     span {
@@ -24,16 +21,16 @@
       font-size: 0.9rem;
     }
     input {
-      background-color: $lightGrey;
+      background-color: white;
       border-radius: 5px;
-      border: none;
+      border: 1px solid $secondary;
       padding: 15px;
       margin-top: 5px;
       outline: none;
     }
     select {
-      border: none;
-      background-color: $lightGrey;
+      border: 1px solid $secondary;
+      background-color: white;
       border-radius: 5px;
       padding: 15px;
       margin-top: 5px;

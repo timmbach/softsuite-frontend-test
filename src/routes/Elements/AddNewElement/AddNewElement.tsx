@@ -1,42 +1,30 @@
 import React, { useState } from "react";
-import NameForm from "./NameForm/NameForm";
 import "./AddNewElement.scss";
-import FrequencyForm from "./FrequencyForm/FrequencyForm";
-import AmountForm from "./AmountForm/AmountForm";
-import Confirmation from "./Confirmation/Confirmation";
-import BillDetails from "./BIllDetails/BillDetails";
+import ElementDetailsForm from "./ElementDetailsForm/ElementDetailsForm";
+import AdditionalDetailsForm from "./AdditionalDetailsForm/AdditionalDetailsForm";
 
 const AddNewElement = ({ setNewElementModal }: any) => {
   const [page, setPage] = useState(0);
 
-  const FormPageTitles = [
-    "Add New Bill",
-    "Add New Bill",
-    "Add New Bill",
-    "Confirmation",
-    "Bill Details",
-  ];
+  const FormPageTitles = "ElementDetails";
 
   const [formData, setFormData] = useState({});
 
   const FormPages = () => {
     if (page == 0) {
-      return <NameForm />;
+      return <ElementDetailsForm />;
     } else if (page == 1) {
-      return <FrequencyForm />;
-    } else if (page == 2) {
-      return <AmountForm />;
-    } else if (page == 3) {
-      return <Confirmation />;
-    } else if (page == 4) {
-      return <BillDetails />;
+      return <AdditionalDetailsForm />;
     }
   };
   return (
     <div className="modal_background">
       <div className="modal_container">
         <div className="header">
-          <h4 className="title">{FormPageTitles[page]}</h4>
+          <div className="title">
+            <span>Element Details</span>
+            <span>Additional Details</span>
+          </div>
           <button
             onClick={() => setNewElementModal(false)}
             style={{

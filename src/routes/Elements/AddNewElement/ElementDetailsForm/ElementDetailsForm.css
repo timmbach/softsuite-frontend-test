@@ -1,0 +1,38 @@
+.elementDetailsForm {
+  width: 95%;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 3%;
+}
+.elementDetailsForm .elementDetailsForm__formGroup + .elementDetailsForm__formGroup {
+  margin-top: 10px;
+}
+.elementDetailsForm .elementDetailsForm__formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.elementDetailsForm .elementDetailsForm__formGroup span {
+  font-size: 0.7rem;
+  color: grey;
+  margin-top: 3px;
+}
+.elementDetailsForm .elementDetailsForm__formGroup label {
+  font-size: 0.9rem;
+}
+.elementDetailsForm .elementDetailsForm__formGroup input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #f6f7f9;
+  padding: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.elementDetailsForm .elementDetailsForm__formGroup select {
+  border: 1px solid #f6f7f9;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5px;
+}/*# sourceMappingURL=ElementDetailsForm.css.map */

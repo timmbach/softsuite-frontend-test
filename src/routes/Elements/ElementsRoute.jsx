@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ElementsTable from "../../components/ElementsTable/ElementsTable";
 import { useState } from "react";
+import AddNewElement from "./AddNewElement/AddNewElement";
 
 // import { useDispatch, useSelector } from "react-redux";
 // import { getElements } from "../../features/elements/elementsSlice";
@@ -72,7 +73,7 @@ function Elements() {
               </div>
             </div>
             <button
-              onClick={() => setNewBillModal(true)}
+              onClick={() => setNewElementModal(true)}
               className="elementsRoute__container_controls_addNew"
             >
               <span>Create Element</span>
@@ -85,7 +86,7 @@ function Elements() {
         </div>
       </div>
       {newElementModal && (
-        <aside className="new_bill_modal">
+        <aside className="new_element_modal">
           <AddNewElement setNewElementModal={setNewElementModal} />
         </aside>
       )}

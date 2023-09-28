@@ -1,9 +1,7 @@
-@import "../../../../../Styles/Constants";
-@import "../../../../../Styles/Colors";
-@import "../../../../../Styles/fonts";
+@import "../../../../styles/colours";
 
-.billDetails {
-  background-color: $veryLightGrey;
+.additionalDetailsForm {
+  background-color: white;
   margin: 10px;
   height: max-content;
   padding: 20px 0px;
@@ -12,7 +10,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  .heading {
+  .additionalDetailsForm__heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +19,7 @@
     img {
       width: 50px;
     }
-    .title {
+    .additionalDetailsForm__title {
       text-align: center;
       font-size: 0.9rem;
       margin-top: 10px;
@@ -30,7 +28,7 @@
       }
     }
   }
-  .body {
+  .additionalDetailsForm__body {
     width: 100%;
     padding: 2px;
     ul {
