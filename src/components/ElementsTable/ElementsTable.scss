@@ -30,6 +30,7 @@
   tr > td {
     padding: 15px;
     border: none;
+    font-size: 0.9rem;
   }
   tr > td {
     border-bottom: 2px solid $secondary;
@@ -42,5 +43,45 @@
   }
   .elementsTable__body {
     text-align: left;
+  }
+}
+.elementsFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .elementsFooter__pageSize {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    strong {
+      // font-weight: bold;
+      color: $primary;
+    }
+    .elementsFooter__pageSize_input {
+      width: 80px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      padding: 10px;
+      background-color: $secondary;
+    }
+  }
+  .elementsFooter__pageNav {
+    display: flex;
+    gap: 20px;
+    .elementsFooter__pageNav_left {
+      background-color: $secondary;
+      color: $primary;
+      border-radius: 5px;
+      padding: 10px;
+      width: 40px;
+    }
+    .elementsFooter__pageNav_right {
+      background-color: $secondary;
+      color: $primary;
+      border-radius: 5px;
+      // padding: 10px;
+      width: 40px;
+    }
   }
 }

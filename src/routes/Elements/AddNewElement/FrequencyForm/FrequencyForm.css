@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: local("Nunito Sans"), url(../assets/fonts/Nunito/NunitoSans-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Sora";
+  src: local("Sora"), url(../assets/fonts/Sora/Sora-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url(../assets/fonts/Inter/Inter-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url(../assets/fonts/Poppins/Poppins-Regular.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url(../assets/fonts/gilroy/Gilroy-Regular.ttf) format("ttf");
+}
+.frequencyForm {
+  width: 95%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 3%;
+}
+.frequencyForm .form_group + .form_group {
+  margin-top: 10px;
+}
+.frequencyForm .form_group {
+  display: flex;
+  flex-direction: column;
+}
+.frequencyForm .form_group span {
+  font-size: 0.7rem;
+  color: grey;
+  margin-top: 3px;
+}
+.frequencyForm .form_group label {
+  font-size: 0.9rem;
+}
+.frequencyForm .form_group input {
+  background-color: #eef1f3;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  margin-top: 5px;
+  outline: none;
+}
+.frequencyForm .form_group select {
+  border: none;
+  background-color: #eef1f3;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5px;
+}/*# sourceMappingURL=FrequencyForm.css.map */

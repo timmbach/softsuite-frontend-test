@@ -1,0 +1,55 @@
+@import "../../../../../Styles/Constants";
+@import "../../../../../Styles/Colors";
+@import "../../../../../Styles/fonts";
+
+.billDetails {
+  background-color: $veryLightGrey;
+  margin: 10px;
+  height: max-content;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    img {
+      width: 50px;
+    }
+    .title {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      p {
+        color: grey;
+      }
+    }
+  }
+  .body {
+    width: 100%;
+    padding: 2px;
+    ul {
+      list-style: none;
+      padding: 20px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        p {
+          color: grey;
+          font-size: 0.9rem;
+        }
+        span {
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -245,7 +245,7 @@
   align-items: center;
   margin: 10px;
   padding: 10px 15px !important;
-  gap: 15px;
+  gap: 20px;
   color: #57678c;
 }
 .sidebar .sidebar__actions .sidebar__actions_myAccount span {
@@ -270,7 +270,7 @@
   align-items: center;
   margin: 10px;
   padding: 10px 15px !important;
-  gap: 15px;
+  gap: 20px;
   color: #57678c;
 }
 .sidebar .sidebar__actions .sidebar__actions_logout span {
