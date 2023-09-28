@@ -179,7 +179,7 @@ function ElementsTable() {
               ))}
             </select>
           </span>
-          <strong>Out of {pageOptions.length}</strong>
+          <strong>Out of {elementsCount}</strong>
         </div>
         <div className="elementsFooter__pageNav">
           <button
