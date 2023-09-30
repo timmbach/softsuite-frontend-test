@@ -16,6 +16,7 @@ export const getLookups = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const { data } = await axios(url);
+      // console.log(data);
       return data;
     } catch (error) {
       // console.log(error);

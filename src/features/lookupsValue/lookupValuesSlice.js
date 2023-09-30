@@ -13,9 +13,9 @@ const initialState = {
 
 export const getLookupValues = createAsyncThunk(
   "lookupValues/getLookupValues",
-  async (_, thunkAPI) => {
+  async (lookupId, thunkAPI) => {
     try {
-      const { data } = await axios(url);
+      const { data } = await axios(`${url}/${lookupId}/lookupvalues`);
       return data;
     } catch (error) {
       // console.log(error);

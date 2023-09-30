@@ -117,6 +117,12 @@ body.active_modal {
         border-radius: 5px;
         border: none;
         cursor: pointer;
+
+        span {
+          font-weight: bold;
+          // word-spacing: 2px;
+          letter-spacing: 0.5px;
+        }
       }
     }
     .elementsRoute__container_table {

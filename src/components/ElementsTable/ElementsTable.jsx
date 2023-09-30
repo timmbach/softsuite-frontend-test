@@ -6,29 +6,36 @@ import {
   faArrowRightArrowLeft,
   faChevronLeft,
   faChevronRight,
+  faEye,
+  faPenToSquare,
+  faTrashCan,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import "./ElementsTable.scss";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getElements } from "../../features/elements/elementsSlice";
 import { getElementLinks } from "../../features/elementLinks/elementLinksSlice";
 import { useTable, useSortBy, usePagination } from "react-table";
 import { COLUMNS } from "./columns";
+import { getLookups } from "../../features/lookups/lookupsSlice";
 
 function ElementsTable() {
   const { elements, currentElementId, elementsCount, isLoading } = useSelector(
     (store) => store.elements
   );
 
+  const [actionOpen, setActionOpen] = useState(false);
+  const { lookups } = useSelector((store) => store.lookups);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getElements());
-    // dispatch(getLookups());
+    dispatch(getLookups());
     dispatch(getElementLinks(currentElementId));
-    // dispatch(getLookups());
+    //   // dispatch(getLookups());
   }, []);
-  //   console.log(elements);
+  // console.log(lookups);
 
   // I am using the useMemo hook from react here to save time by ensuring that the apps does not repopulate already populated elements
   const columns = useMemo(() => COLUMNS, []);
@@ -65,6 +72,7 @@ function ElementsTable() {
   // const initialPageSize = pageSize;
 
   const pageList = [];
+  const lookupList = lookups;
 
   for (let pageNumber = 1; pageNumber < pageCount.length + 1; pageNumber++) {
     pageList.push(
@@ -117,19 +125,27 @@ function ElementsTable() {
               ))}
             </tr>
           ))}
-        </thead>{" "}
+        </thead>
         {isLoading ? (
-          <span
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "30px 0px",
-            }}
-          >
-            Loading...
-          </span>
+          <tbody>
+            <tr>
+              <td>
+                <span
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "30px 0px",
+                    fontSize: "1rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Loading...
+                </span>
+              </td>
+            </tr>
+          </tbody>
         ) : (
           <tbody className="elementsTable__body" {...getTableBodyProps()}>
             {page.map((row) => {
@@ -139,10 +155,95 @@ function ElementsTable() {
                 <tr {...row.getRowProps()}>
                   {row.cells.map((cell) => {
                     // eslint-disable-next-line react/jsx-key
+                    if (cell.column.Header == "Action") {
+                      return (
+                        // eslint-disable-next-line react/jsx-key
+                        <td
+                          {...cell.getCellProps()}
+                          style={{ position: "relative" }}
+                        >
+                          {/* {actionOpen && (
+                            <div
+                              style={{
+                                position: "absolute",
+                                display: "flex",
+                                flexDirection: "column",
+                                // top: "0",
+                                bottom: "30px",
+                                width: "100px",
+                                boxShadow:
+                                  "1px 39px 19px -5px rgba(0,0,0,0.16)",
+                                backgroundColor: "white",
+                              }}
+                            >
+                              <div
+                                style={{
+                                  display: "flex",
+                                  color: "#2d416f",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <FontAwesomeIcon icon={faEye} />
+                                <span>View Element Links</span>
+                              </div>
+                              <div
+                                style={{
+                                  display: "flex",
+                                  color: "#2d416f",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                                <span>Edit Element</span>
+                              </div>
+                              <div
+                                style={{
+                                  display: "flex",
+                                  color: "red",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <FontAwesomeIcon icon={faTrashCan} />
+                                <span>Delete Element</span>
+                              </div>
+                            </div>
+                          )} */}
+                          <div
+                            style={{
+                              width: "100%",
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              textAlign: "center",
+                            }}
+                          >
+                            <button
+                              style={{
+                                border: "2px solid green",
+                                background: "none",
+                                borderRadius: "5px",
+                                height: "18px",
+                                width: "18px",
+                                fontWeight: "bold",
+                                color: "green",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                textAlign: "center",
+                                cursor: "pointer",
+                              }}
+                              onClick={() => setActionOpen(!actionOpen)}
+                            >
+                              <span>...</span>
+                            </button>
+                          </div>
+                        </td>
+                      );
+                    }
                     return (
                       // eslint-disable-next-line react/jsx-key
                       <td {...cell.getCellProps()}>
-                        <ElementItem cell={cell} />
+                        <ElementItem cell={cell} lookups={lookupList} />
                       </td>
                     );
                   })}

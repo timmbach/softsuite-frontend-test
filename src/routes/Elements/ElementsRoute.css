@@ -119,6 +119,10 @@ body.active_modal {
   border: none;
   cursor: pointer;
 }
+.elementsRoute .elementsRoute__container .elementsRoute__container_controls .elementsRoute__container_controls_addNew span {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
 .elementsRoute .elementsRoute__container .elementsRoute__container_table {
   width: 100%;
   display: flex;

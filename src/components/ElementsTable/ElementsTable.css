@@ -23,6 +23,7 @@
   width: 100%;
   margin: 10px 0px;
   border-collapse: collapse;
+  font-size: 0.7rem;
 }
 .elementsTable tr > th,
 .elementsTable tr > td {
@@ -32,6 +33,7 @@
 }
 .elementsTable tr > td {
   border-bottom: 2px solid #f6f7f9;
+  font-size: 0.7rem;
 }
 .elementsTable .elementsTable__head {
   text-align: left;

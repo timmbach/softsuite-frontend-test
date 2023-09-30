@@ -18,9 +18,23 @@ function Root() {
   // }, [elements]);
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       <Header />
-      <div className="" style={{ display: "flex", width: "100vw" }}>
+      <div
+        className=""
+        style={{
+          display: "flex",
+
+          width: "100vw",
+        }}
+      >
         <Sidebar />
         <Outlet />
       </div>

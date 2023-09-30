@@ -6,9 +6,14 @@
   width: 20%;
   height: 85vh;
   background-color: white;
+  overflow: hidden;
   // border: 1px solid red;
+  span {
+    font-weight: bold;
+  }
   ul {
     list-style-type: none;
+    padding-left: 0px;
 
     li img {
       width: 12px;
@@ -16,9 +21,20 @@
     li span {
       font-weight: 500;
       color: $fontLightPrimary;
+      font-weight: bold;
     }
-    li div:hover {
-      color: $primary;
+    li button {
+      background-color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px 15px !important;
+      &:hover {
+        span {
+          color: $primary;
+          font-weight: bold;
+        }
+      }
     }
   }
   //   padding: 20px;
@@ -81,11 +97,13 @@
       justify-content: center;
       flex-direction: column;
       padding: 0px;
+      gap: 5px;
       li {
-        div {
+        button {
           padding: 10px 0px;
           margin: 5px 0px;
           border-radius: 5px;
+          border: none;
           &:hover {
             color: $primary;
             font-weight: bold;
@@ -118,6 +136,30 @@
         font-weight: bold;
       }
     }
+    .sidebar__nav_activities-active {
+      width: 80%;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      gap: 5px;
+      margin: 10px;
+      cursor: pointer;
+      padding: 10px 15px !important;
+      color: $lightPrimary;
+      .sidebar__nav_activities_span {
+        font-weight: bold;
+        font-size: 0.75rem;
+        color: $primary;
+        cursor: pointer;
+      }
+      background-color: #cde1e3;
+      &:hover {
+        background-color: #cde1e3 !important;
+        transition: background-color 0.5s ease;
+        color: $primary;
+        font-weight: bold;
+      }
+    }
     .sidebar__nav_activities {
       display: flex;
       align-items: center;
@@ -126,18 +168,30 @@
       cursor: pointer;
       padding: 10px 15px !important;
       color: $lightPrimary;
-      span {
-        // cursor: default;
-        &:hover {
+      &:hover {
+        .sidebar__nav_activities_span {
+          // cursor: default;
+          color: $fontLightPrimary;
+          font-weight: normal;
           color: $primary;
           font-weight: bold;
           cursor: pointer;
         }
       }
       &:hover {
-        background-color: #cde1e3;
+        background-color: #cde1e3 !important;
         transition: background-color 0.5s ease;
         color: $primary;
+        font-weight: bold;
+      }
+    }
+    .sidebar__nav_activities_options {
+      background-color: $secondary;
+      border-radius: 5px;
+      color: $primary;
+      width: 80%;
+      li {
+        padding: 10px;
         font-weight: bold;
       }
     }
@@ -167,13 +221,15 @@
     }
     .sidebar__nav_elementSetup {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       gap: 10px;
       width: 100%;
+      // margin-bottom: -8px !important;
       cursor: pointer;
       color: white;
       background-color: $green;
+
       &:hover {
         color: white !important;
         font-weight: normal !important;
@@ -186,6 +242,29 @@
     .sidebar__nav_elementSetup_options {
       display: flex;
       flex-direction: column;
+      width: 70%;
+      // margin-top: 15px;
+
+      transition: max-height 0.3s ease-in-out;
+      span {
+        color: $primary;
+      }
+      a.active {
+        background-color: $lightGreen;
+      }
+      .sidebar__nav_elementSetup_elements {
+        list-style-type: none;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 8px;
+      }
+      .sidebar__nav_elementSetup_balances {
+        list-style-type: none;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 8px;
+        // background-color: $lightGreen;
+      }
     }
     .sidebar__nav_employees {
       display: flex;
@@ -218,10 +297,11 @@
     justify-content: center;
     flex-direction: column;
     width: 90%;
-    padding: 0;
+    padding: 0px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 10px;
+
     font-size: 0.75rem;
 
     .sidebar__actionsList {
@@ -230,17 +310,23 @@
       justify-content: center;
       flex-direction: column;
       padding: 0px;
+      gap: 5px;
       li {
-        div {
+        button {
           padding: 10px 0px;
           margin: 5px 0px;
           border-radius: 5px;
+          border: none;
+          &:hover {
+            color: $primary;
+            font-weight: bold;
+          }
         }
       }
     }
     .sidebar__actions_payrollSettings {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       gap: 10px;
       width: 100%;
@@ -249,6 +335,7 @@
 
       span {
         margin-left: -24px;
+        font-weight: bold;
       }
       span {
         cursor: default;
@@ -262,6 +349,20 @@
         transition: background-color 0.5s ease;
         color: $primary;
         font-weight: bold;
+      }
+    }
+    .sidebar__actions_payrollSettings_options {
+      background-color: $secondary;
+      border-radius: 5px;
+      color: $primary;
+      padding: 0px 10px;
+      width: 80%;
+      li {
+        padding: 10px;
+        font-weight: bold;
+        list-style-type: none;
+        text-align: left;
+        padding-left: 0px;
       }
     }
     .sidebar__actions_myAccount {

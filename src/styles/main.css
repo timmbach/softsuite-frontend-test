@@ -36,4 +36,15 @@ body {
   max-width: 1440px;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+body a {
+  -webkit-text-decoration: "none";
+          text-decoration: "none";
+}
+
+span {
+  font-family: "Gilroy", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
 }/*# sourceMappingURL=main.css.map */

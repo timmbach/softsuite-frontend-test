@@ -26,6 +26,7 @@
   width: 100%;
   margin: 10px 0px;
   border-collapse: collapse;
+  font-size: 0.7rem;
   tr > th,
   tr > td {
     padding: 15px;
@@ -34,7 +35,12 @@
   }
   tr > td {
     border-bottom: 2px solid $secondary;
+    font-size: 0.7rem;
   }
+  // td,
+  // th {
+  //   font-size: 12px !important;
+  // }
 
   .elementsTable__head {
     text-align: left;

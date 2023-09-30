@@ -4,9 +4,14 @@
   width: 20%;
   height: 85vh;
   background-color: white;
+  overflow: hidden;
+}
+.sidebar span {
+  font-weight: bold;
 }
 .sidebar ul {
   list-style-type: none;
+  padding-left: 0px;
 }
 .sidebar ul li img {
   width: 12px;
@@ -14,9 +19,18 @@
 .sidebar ul li span {
   font-weight: 500;
   color: #818da9;
+  font-weight: bold;
 }
-.sidebar ul li div:hover {
+.sidebar ul li button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px !important;
+}
+.sidebar ul li button:hover span {
   color: #2d416f;
+  font-weight: bold;
 }
 .sidebar .sidebar__modeSwitch {
   padding: 10px 0px;
@@ -71,13 +85,15 @@
   justify-content: center;
   flex-direction: column;
   padding: 0px;
+  gap: 5px;
 }
-.sidebar .sidebar__nav .sidebar__navList li div {
+.sidebar .sidebar__nav .sidebar__navList li button {
   padding: 10px 0px;
   margin: 5px 0px;
   border-radius: 5px;
+  border: none;
 }
-.sidebar .sidebar__nav .sidebar__navList li div:hover {
+.sidebar .sidebar__nav .sidebar__navList li button:hover {
   color: #2d416f;
   font-weight: bold;
 }
@@ -102,6 +118,29 @@
   color: #2d416f !important;
   font-weight: bold;
 }
+.sidebar .sidebar__nav .sidebar__nav_activities-active {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px 15px !important;
+  color: #57678c;
+  background-color: #cde1e3;
+}
+.sidebar .sidebar__nav .sidebar__nav_activities-active .sidebar__nav_activities_span {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #2d416f;
+  cursor: pointer;
+}
+.sidebar .sidebar__nav .sidebar__nav_activities-active:hover {
+  background-color: #cde1e3 !important;
+  transition: background-color 0.5s ease;
+  color: #2d416f;
+  font-weight: bold;
+}
 .sidebar .sidebar__nav .sidebar__nav_activities {
   display: flex;
   align-items: center;
@@ -111,15 +150,27 @@
   padding: 10px 15px !important;
   color: #57678c;
 }
-.sidebar .sidebar__nav .sidebar__nav_activities span:hover {
+.sidebar .sidebar__nav .sidebar__nav_activities:hover .sidebar__nav_activities_span {
+  color: #818da9;
+  font-weight: normal;
   color: #2d416f;
   font-weight: bold;
   cursor: pointer;
 }
 .sidebar .sidebar__nav .sidebar__nav_activities:hover {
-  background-color: #cde1e3;
+  background-color: #cde1e3 !important;
   transition: background-color 0.5s ease;
   color: #2d416f;
+  font-weight: bold;
+}
+.sidebar .sidebar__nav .sidebar__nav_activities_options {
+  background-color: #f6f7f9;
+  border-radius: 5px;
+  color: #2d416f;
+  width: 80%;
+}
+.sidebar .sidebar__nav .sidebar__nav_activities_options li {
+  padding: 10px;
   font-weight: bold;
 }
 .sidebar .sidebar__nav .sidebar__nav_salaryStructure {
@@ -148,7 +199,7 @@
 }
 .sidebar .sidebar__nav .sidebar__nav_elementSetup {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -167,6 +218,26 @@
 .sidebar .sidebar__nav .sidebar__nav_elementSetup_options {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  transition: max-height 0.3s ease-in-out;
+}
+.sidebar .sidebar__nav .sidebar__nav_elementSetup_options span {
+  color: #2d416f;
+}
+.sidebar .sidebar__nav .sidebar__nav_elementSetup_options a.active {
+  background-color: #f3fff1;
+}
+.sidebar .sidebar__nav .sidebar__nav_elementSetup_options .sidebar__nav_elementSetup_elements {
+  list-style-type: none;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 8px;
+}
+.sidebar .sidebar__nav .sidebar__nav_elementSetup_options .sidebar__nav_elementSetup_balances {
+  list-style-type: none;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 8px;
 }
 .sidebar .sidebar__nav .sidebar__nav_employees {
   display: flex;
@@ -197,10 +268,10 @@
   justify-content: center;
   flex-direction: column;
   width: 90%;
-  padding: 0;
+  padding: 0px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 0.75rem;
 }
 .sidebar .sidebar__actions .sidebar__actionsList {
@@ -209,15 +280,21 @@
   justify-content: center;
   flex-direction: column;
   padding: 0px;
+  gap: 5px;
 }
-.sidebar .sidebar__actions .sidebar__actionsList li div {
+.sidebar .sidebar__actions .sidebar__actionsList li button {
   padding: 10px 0px;
   margin: 5px 0px;
   border-radius: 5px;
+  border: none;
+}
+.sidebar .sidebar__actions .sidebar__actionsList li button:hover {
+  color: #2d416f;
+  font-weight: bold;
 }
 .sidebar .sidebar__actions .sidebar__actions_payrollSettings {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -226,6 +303,7 @@
 }
 .sidebar .sidebar__actions .sidebar__actions_payrollSettings span {
   margin-left: -24px;
+  font-weight: bold;
 }
 .sidebar .sidebar__actions .sidebar__actions_payrollSettings span {
   cursor: default;
@@ -239,6 +317,20 @@
   transition: background-color 0.5s ease;
   color: #2d416f;
   font-weight: bold;
+}
+.sidebar .sidebar__actions .sidebar__actions_payrollSettings_options {
+  background-color: #f6f7f9;
+  border-radius: 5px;
+  color: #2d416f;
+  padding: 0px 10px;
+  width: 80%;
+}
+.sidebar .sidebar__actions .sidebar__actions_payrollSettings_options li {
+  padding: 10px;
+  font-weight: bold;
+  list-style-type: none;
+  text-align: left;
+  padding-left: 0px;
 }
 .sidebar .sidebar__actions .sidebar__actions_myAccount {
   display: flex;

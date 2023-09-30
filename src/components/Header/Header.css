@@ -5,6 +5,9 @@
   width: 100vw;
   z-index: 10;
 }
+.header span {
+  font-weight: bold;
+}
 .header .header__logo {
   width: 20%;
   padding: 10px;
@@ -104,7 +107,7 @@
   gap: 5px;
 }
 .header .header__actions .header__actions_profile .header__actions_profileName span:first-child {
-  font-weight: bold;
+  font-weight: 900;
   color: #2d416f;
 }
 .header .header__actions .header__actions_profile .header__actions_profileName span:nth-child(2) {

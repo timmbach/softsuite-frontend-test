@@ -26,34 +26,34 @@ export const COLUMNS = [
   {
     accessor: "action",
     Header: "Action",
-    Cell: ({ row: { original } }) => (
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        <button
-          style={{
-            border: "2px solid green",
-            background: "none",
-            borderRadius: "5px",
-            height: "20px",
-            width: "18px",
-            fontWeight: "bold",
-            color: "green",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <span>...</span>
-        </button>
-      </div>
-    ),
+    // Cell: ({ row: { original } }) => (
+    //   <div
+    //     style={{
+    //       width: "100%",
+    //       display: "flex",
+    //       justifyContent: "center",
+    //       alignItems: "center",
+    //       textAlign: "center",
+    //     }}
+    //   >
+    //     <button
+    //       style={{
+    //         border: "2px solid green",
+    //         background: "none",
+    //         borderRadius: "5px",
+    //         height: "18px",
+    //         width: "18px",
+    //         fontWeight: "bold",
+    //         color: "green",
+    //         display: "flex",
+    //         justifyContent: "center",
+    //         alignItems: "center",
+    //         textAlign: "center",
+    //       }}
+    //     >
+    //       <span>...</span>
+    //     </button>
+    //   </div>
+    // ),
   },
 ];
